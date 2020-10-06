@@ -1,5 +1,5 @@
 # ------------------------------------------------
-# Program by Denis Astahov
+# Program by Lars Kjeldgaard
 #
 #
 # Version      Date           Info
