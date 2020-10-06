@@ -8,11 +8,11 @@
 #---------------------------------------------------------------------
 name: CI-CD-Pipeline-to-AWS-ElasticBeanstalk
 env:
-  EB_PACKAGE_S3_BUCKET_NAME : "zzz.flask-app"
+  EB_PACKAGE_S3_BUCKET_NAME : "larskflask"
   EB_APPLICATION_NAME       : "MyFlask"
-  EB_ENVIRONMENT_NAME       : "MyFlask-env"
+  EB_ENVIRONMENT_NAME       : "Myflask-env"
   DEPLOY_PACKAGE_NAME       : "flask-app-${{ github.sha }}.zip"
-  AWS_REGION_NAME           : "us-west-2"
+  AWS_REGION_NAME           : "eu-central-1"
 
 on: 
   push:
@@ -55,7 +55,7 @@ jobs:
              aws-secret-access-key: ${{ secrets.MY_AWS_SECRET_KEY }}
              aws-region           : ${{ env.AWS_REGION_NAME }}
          
-         - name: Create new ElasticBeanstalk Applicaiton Version
+         - name: Create new ElasticBeanstalk Application Version
            run : |
             aws elasticbeanstalk create-application-version \
             --application-name ${{ env.EB_APPLICATION_NAME }} \
