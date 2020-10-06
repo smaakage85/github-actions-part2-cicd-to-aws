@@ -7,4 +7,4 @@ Status of Last Deployment:<br>
 
 
 
-Copyleft by Lars Kjeldgaard.
+Copyleft by Lars Kjeldgaard, 2020.
